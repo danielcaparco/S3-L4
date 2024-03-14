@@ -1,0 +1,6 @@
+Una backdoor ha lo scopo di oltrepassare le difese di un sistema.
+All'inizio del codice troviamo un socket che ci permette di scambiare pacchetti. Poi c'è la funzione socket.socket che ci permette di creare un socket che resta in ascolto, usando dei parametri.
+AF_INET specifica che il socket deve utilizzare un IPv4, mentre SOCK_STREAM specifica che vogliamo una connessione TCP.
+Con s.bind colleghiamo il socket all'indirizzo e alla porta che decidiamo.
+Per accettare connessioni in entrata usiamo s.accept.
+Viene usato un while con all'interno try che serve per evitare che il programma vada in errore, poi c'è if con all'interno un sistema di decodifica.
